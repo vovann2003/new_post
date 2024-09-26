@@ -30,7 +30,6 @@ class NewPost:
             "methodProperties": {
                 "AreaRef": area_ref,
                 "CityRef": city_ref,
-
             }
         }
         return payload
@@ -105,7 +104,7 @@ class NewPost:
         :return:
         """
         df = pd.DataFrame(data=data, columns=['Область', 'Місто', 'Відділення'])
-        df.to_excel('./new_post.xlsx')
+        df.to_excel('./new_post.xlsx', index=False)
 
 
 if __name__ == "__main__":
